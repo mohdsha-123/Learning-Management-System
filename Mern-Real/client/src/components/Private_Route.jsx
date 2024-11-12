@@ -5,4 +5,3 @@ export default function Private_Route() {
   const { currentUser } = useSelector((state) => state.user);
   return currentUser ? <Outlet /> : <Navigate to="/sign-in" />;
 }
- 
