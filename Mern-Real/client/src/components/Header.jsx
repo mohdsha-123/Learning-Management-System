@@ -16,22 +16,19 @@ export default function Header() {
   };
 
   useEffect(() => {
-    {
-      const urlParams = new URLSearchParams(location.search);
-      const searchTermFromUrl = urlParams.get("searchTerm");
-      if (searchTermFromUrl) {
-        setSearchTerm(searchTermFromUrl);
-      }
+    const urlParams = new URLSearchParams(location.search);
+    const searchTermFromUrl = urlParams.get("searchTerm");
+    if (searchTermFromUrl) {
+      setSearchTerm(searchTermFromUrl);
     }
   }, [location.search]);
-
   return (
     <header className="bg-slate-200 shadow-md">
       <div className="flex justify-between items-center max-w-6xl mx-auto p-3">
         <Link to="/">
-          <h1 className="font-bold text text-sm sm:text-xl flex flex-wrap">
-            <span className="text-slate-500 ">Shariq</span>
-            <span className="text-slate-700 ">Estate</span>
+          <h1 className="font-bold text-sm sm:text-xl flex flex-wrap">
+            <span className="text-slate-500">Sahand</span>
+            <span className="text-slate-700">Estate</span>
           </h1>
         </Link>
         <form
@@ -49,8 +46,7 @@ export default function Header() {
             <FaSearch className="text-slate-600" />
           </button>
         </form>
-
-        <ul className="flex gap-4 ">
+        <ul className="flex gap-4">
           <Link to="/">
             <li className="hidden sm:inline text-slate-700 hover:underline">
               Home
@@ -69,7 +65,7 @@ export default function Header() {
                 alt="profile"
               />
             ) : (
-              <li className=" text-slate-700 hover:underline"> Sign In</li>
+              <li className=" text-slate-700 hover:underline"> Sign in</li>
             )}
           </Link>
         </ul>
