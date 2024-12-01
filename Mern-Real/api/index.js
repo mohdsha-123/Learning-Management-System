@@ -16,7 +16,7 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
-
+ 
 const __dirname = path.resolve();
 
 const app = express();
